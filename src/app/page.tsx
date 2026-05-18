@@ -99,42 +99,29 @@ export default function Home() {
           <div className="relative flex items-center justify-between h-20 sm:h-24">
             
             {/* Logo area */}
-            <a href="#hero" className="flex items-center justify-center md:justify-start w-full md:w-auto group">
+            <a href="#hero" className="flex items-center justify-start group select-none">
               
-              {/* Mobile View: Original stacked vertical logo (Centered and scaled at 1.6) */}
-              <div className="relative w-40 h-16 md:hidden transition-transform duration-300 scale-[1.6] origin-center">
-                <Image
-                  src="/logo-transparent.png"
-                  alt="Periodoncia Uruguay Logo"
-                  fill
-                  sizes="256px"
-                  className="object-contain"
-                  priority
-                />
-              </div>
-
-              {/* Desktop (Web) View: Isotype on the left, Typography on the right */}
-              <div className="hidden md:flex items-center gap-3.5 group-hover:opacity-95 transition-opacity duration-300">
+              <div className="flex items-center gap-2.5 sm:gap-3.5 group-hover:opacity-95 transition-opacity duration-300">
                 
                 {/* Isotype (Sphere) with subtle micro-rotation on hover */}
-                <div className="relative w-12 h-12 transition-transform duration-500 group-hover:rotate-[15deg]">
+                <div className="relative w-9 h-9 md:w-12 md:h-12 transition-transform duration-500 group-hover:rotate-[15deg]">
                   <Image
                     src="/logo_isotype_v3.png"
                     alt="Isotipo Periodoncia Uruguay"
                     fill
-                    sizes="48px"
+                    sizes="(max-width: 768px) 36px, 48px"
                     className="object-contain"
                     priority
                   />
                 </div>
 
                 {/* Typography (Brand name text image aligned to the right of isotype) */}
-                <div className="relative w-56 h-12">
+                <div className="relative w-44 h-9 sm:w-48 sm:h-10 md:w-56 md:h-12">
                   <Image
                     src="/logo_typography_v3.png"
                     alt="Periodoncia Uruguay"
                     fill
-                    sizes="224px"
+                    sizes="(max-width: 768px) 176px, 224px"
                     className="object-contain"
                     priority
                   />
@@ -344,14 +331,20 @@ export default function Home() {
                 priority
               />
               
-              {/* Doctor Name overlay card */}
-              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-gray-100 shadow-lg font-sans">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="font-bold text-gray-900 text-sm sm:text-base">Dra. Fabiana Villarnobo</h3>
-                    <p className="text-xs text-gray-500 font-medium">Especialista en Periodoncia, Ortodoncia y Ortopedia</p>
+              {/* Doctor Name overlay card - Premium Glassmorphism */}
+              <div className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md py-3 px-4 rounded-xl border border-white/20 shadow-md font-sans">
+                <div className="flex items-center justify-between gap-3">
+                  <div className="space-y-0.5">
+                    <h3 className="font-bold text-gray-900 text-sm sm:text-base tracking-tight">Dra. Fabiana Villarnobo</h3>
+                    <p className="text-[11px] sm:text-xs text-gray-500 font-medium leading-normal tracking-wide">
+                      Especialista en Periodoncia, Ortodoncia y Ortopedia
+                    </p>
                   </div>
-                  <div className="h-2 w-2 rounded-full bg-emerald-500 animate-ping shrink-0" />
+                  {/* Premium Breathing Pulse Indicator */}
+                  <div className="relative flex h-2 w-2 shrink-0">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -996,40 +989,28 @@ export default function Home() {
             <div className="md:col-span-5 text-center md:text-left space-y-3">
               <div className="flex items-center justify-center md:justify-start">
                 
-                {/* Mobile Footer View: Original stacked logo */}
-                <div className="relative w-56 h-14 md:hidden transition-transform duration-300">
-                  <Image
-                    src="/logo-transparent.png"
-                    alt="Periodoncia Uruguay Logo"
-                    fill
-                    sizes="224px"
-                    className="object-contain filter invert brightness-200 opacity-80"
-                    priority
-                  />
-                </div>
-
-                {/* Desktop (Web) Footer View: Isotype left, Typography right (inverted/white for dark mode) */}
-                <div className="hidden md:flex items-center gap-3.5 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                {/* Footer View: Isotype left, Typography right (inverted/white for dark mode) */}
+                <div className="flex items-center gap-2.5 sm:gap-3.5 opacity-80 hover:opacity-100 transition-opacity duration-300">
                   
                   {/* Isotype (Sphere) inverted */}
-                  <div className="relative w-10 h-10 filter invert brightness-200">
+                  <div className="relative w-9 h-9 md:w-10 md:h-10 filter invert brightness-200">
                     <Image
                       src="/logo_isotype_v3.png"
                       alt="Isotipo Periodoncia Uruguay"
                       fill
-                      sizes="40px"
+                      sizes="(max-width: 768px) 36px, 40px"
                       className="object-contain"
                       priority
                     />
                   </div>
 
                   {/* Typography inverted */}
-                  <div className="relative w-48 h-10 filter invert brightness-200">
+                  <div className="relative w-44 h-9 md:w-48 md:h-10 filter invert brightness-200">
                     <Image
                       src="/logo_typography_v3.png"
                       alt="Periodoncia Uruguay"
                       fill
-                      sizes="192px"
+                      sizes="(max-width: 768px) 176px, 192px"
                       className="object-contain"
                       priority
                     />
