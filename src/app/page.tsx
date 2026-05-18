@@ -349,7 +349,7 @@ export default function Home() {
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="font-bold text-gray-900 text-sm sm:text-base">Dra. Fabiana Villarnobo</h3>
-                    <p className="text-xs text-gray-500 font-medium">Especialista en Ortodoncia & Ortopedia</p>
+                    <p className="text-xs text-gray-500 font-medium">Especialista en Periodoncia, Ortodoncia y Ortopedia</p>
                   </div>
                   <div className="h-2 w-2 rounded-full bg-emerald-500 animate-ping shrink-0" />
                 </div>
